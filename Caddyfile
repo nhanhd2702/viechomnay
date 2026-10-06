@@ -1,0 +1,19 @@
+# ==============================================================================
+# Cấu hình Caddy Reverse Proxy & Tự Động Cấp Chứng Chỉ SSL (HTTPS)
+# ==============================================================================
+
+viechomnay.systems.vn {
+    # Chuyển tiếp request sang container Việc Hôm Nay Web App
+    reverse_proxy viechomnay-web:80
+
+    # Header bảo mật tối ưu
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Bật nén Gzip / Zstandard
+    encode zstd gzip
+}

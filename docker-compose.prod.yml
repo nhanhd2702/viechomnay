@@ -1,0 +1,36 @@
+# ==============================================================================
+# Việc Hôm Nay - Docker Compose Production (Kèm SSL HTTPS Tự Động)
+# Tên miền: viechomnay.systems.vn
+# ==============================================================================
+
+services:
+  viechomnay-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: viechomnay-web
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: viechomnay-ssl-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - viechomnay-web
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+
+volumes:
+  caddy_data:
+  caddy_config:
