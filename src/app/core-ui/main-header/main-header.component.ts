@@ -48,6 +48,7 @@ import { DesktopPanelButtonsComponent } from './desktop-panel-buttons/desktop-pa
 import { toSignal } from '@angular/core/rxjs-interop';
 import { FocusButtonComponent } from './focus-button/focus-button.component';
 import { EmlDropDirective } from '../../core/drop-paste-input/eml-drop.directive';
+import { VhnGoogleUserBadgeComponent } from '../../features/vhn-google/vhn-google-user-badge/vhn-google-user-badge.component';
 
 /** One `DOM_DELTA_LINE` notch, in CSS pixels. Matches the row's icon metrics. */
 const WHEEL_LINE_HEIGHT_PX = 16;
@@ -83,6 +84,7 @@ const ACTION_ROW_REVEAL_PIN_MS = 400;
     RemoteTrackingPillComponent,
     DesktopPanelButtonsComponent,
     FocusButtonComponent,
+    VhnGoogleUserBadgeComponent,
   ],
 })
 export class MainHeaderComponent implements OnDestroy {

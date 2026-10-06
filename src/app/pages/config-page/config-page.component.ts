@@ -79,6 +79,7 @@ import {
   searchSettings,
   SettingsSearchTarget,
 } from '../../features/config/settings-search.util';
+import { VhnGoogleSettingsComponent } from '../../features/vhn-google/vhn-google-settings/vhn-google-settings.component';
 
 /** Kept in sync with `animationDuration` on the settings `mat-tab-group`. */
 const TAB_ANIMATION_DURATION_MS = 200;
@@ -111,6 +112,7 @@ const TAB_ANIMATION_DURATION_MS = 200;
     MatAutocomplete,
     MatAutocompleteTrigger,
     MatOption,
+    VhnGoogleSettingsComponent,
   ],
 })
 export class ConfigPageComponent implements OnInit {
