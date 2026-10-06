@@ -1,0 +1,43 @@
+<div class="vhn-heatmap-scroll">
+  <svg
+    [attr.width]="svgWidth()"
+    [attr.height]="svgHeight()"
+    class="vhn-heatmap-svg"
+  >
+    <!-- Day labels -->
+    <text x="0" y="12" class="vhn-day-label">T2</text>
+    <text x="0" y="46" class="vhn-day-label">T4</text>
+    <text x="0" y="80" class="vhn-day-label">T6</text>
+    <text x="0" y="114" class="vhn-day-label">CN</text>
+
+    <!-- Cells -->
+    <g transform="translate(24, 0)">
+      @for (week of weeks(); track $index; let wi = $index) {
+        @for (day of week; track $index; let di = $index) {
+          @if (day) {
+            <rect
+              [attr.x]="wi * (CELL_SIZE + GAP)"
+              [attr.y]="di * (CELL_SIZE + GAP)"
+              [attr.width]="CELL_SIZE"
+              [attr.height]="CELL_SIZE"
+              [attr.fill]="colorForCount(day.count)"
+              rx="3"
+              class="vhn-heatmap-cell"
+              [matTooltip]="day.date + ': ' + day.count + ' việc hoàn thành'"
+            />
+          }
+        }
+      }
+    </g>
+  </svg>
+</div>
+
+<div class="vhn-heatmap-legend">
+  <span class="legend-label">Ít hơn</span>
+  <span class="legend-swatch" style="background: var(--surface-2, rgba(0,0,0,0.06));"></span>
+  <span class="legend-swatch" style="background: #a7f3d0;"></span>
+  <span class="legend-swatch" style="background: #34d399;"></span>
+  <span class="legend-swatch" style="background: #10b981;"></span>
+  <span class="legend-swatch" style="background: #047857;"></span>
+  <span class="legend-label">Nhiều hơn</span>
+</div>

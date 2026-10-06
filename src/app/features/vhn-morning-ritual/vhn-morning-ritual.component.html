@@ -1,0 +1,46 @@
+@if (isVisible()) {
+  <div class="vhn-ritual-backdrop">
+    <div class="vhn-ritual-card">
+      <div class="vhn-ritual-header">
+        <div class="vhn-ritual-icon">
+          <mat-icon>wb_sunny</mat-icon>
+        </div>
+        <div class="vhn-ritual-title-wrap">
+          <h2>{{ greeting() }}</h2>
+          <p>Hôm nay bạn cần hoàn thành những công việc gì?</p>
+        </div>
+      </div>
+
+      <div class="vhn-ritual-body">
+        <textarea
+          [(ngModel)]="taskInput"
+          placeholder="Ví dụ:&#10;Gặp đối tác lúc 10h #hop&#10;Hoàn thiện báo cáo quý +1h !&#10;Gửi tài liệu cho team"
+          rows="6"
+          autofocus
+        ></textarea>
+        <p class="vhn-ritual-hint">
+          💡 Mẹo: Nhập mỗi công việc một dòng. Hỗ trợ cú pháp nhanh: <code>#tag</code>, <code>+30m</code>, <code>!</code> (ưu tiên cao).
+        </p>
+      </div>
+
+      <div class="vhn-ritual-actions">
+        <button
+          mat-button
+          type="button"
+          (click)="skip()"
+        >
+          Để sau
+        </button>
+        <button
+          mat-flat-button
+          color="primary"
+          type="button"
+          (click)="startDay()"
+        >
+          <mat-icon>play_arrow</mat-icon>
+          Bắt đầu ngày làm việc
+        </button>
+      </div>
+    </div>
+  </div>
+}

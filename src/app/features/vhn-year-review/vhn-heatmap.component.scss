@@ -1,0 +1,50 @@
+.vhn-heatmap-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding: 8px 0;
+  scrollbar-width: thin;
+}
+
+.vhn-heatmap-svg {
+  display: block;
+}
+
+.vhn-day-label {
+  font-size: 11px;
+  fill: var(--text-color-muted, #9ca3af);
+  font-weight: 500;
+  dominant-baseline: middle;
+}
+
+.vhn-heatmap-cell {
+  transition: transform 0.15s, opacity 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+    stroke: var(--brand, #10b981);
+    stroke-width: 1.5px;
+  }
+}
+
+.vhn-heatmap-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text-color-muted, #6b7280);
+
+  .legend-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .legend-label {
+    margin: 0 4px;
+  }
+}

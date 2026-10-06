@@ -1,0 +1,115 @@
+.vhn-ritual-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.vhn-ritual-card {
+  background: var(--card-bg, #ffffff);
+  color: var(--text-color, #1f2937);
+  border-radius: 20px;
+  padding: 32px 36px;
+  width: 520px;
+  max-width: 95vw;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  animation: slideUp 0.25s ease-out;
+}
+
+.vhn-ritual-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  .vhn-ritual-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    mat-icon {
+      font-size: 28px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .vhn-ritual-title-wrap {
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--brand, #10b981);
+    }
+    p {
+      margin: 4px 0 0;
+      font-size: 0.95rem;
+      color: var(--text-color-muted, #6b7280);
+    }
+  }
+}
+
+.vhn-ritual-body {
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1.5px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: var(--bg, #f9fafb);
+    color: var(--text-color, #111827);
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: var(--brand, #10b981);
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    }
+  }
+
+  .vhn-ritual-hint {
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+    color: var(--text-color-muted, #9ca3af);
+  }
+}
+
+.vhn-ritual-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+
+  button {
+    border-radius: 10px;
+    font-weight: 600;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

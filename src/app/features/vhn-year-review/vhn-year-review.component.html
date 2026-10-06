@@ -1,0 +1,144 @@
+<div class="vhn-review-container">
+  <!-- Header -->
+  <header class="vhn-review-header">
+    <div class="vhn-header-titles">
+      <h1>📊 Báo Cáo & Thống Kê</h1>
+      <p>Tổng kết thành quả và mức độ kiên trì của bạn qua từng năm</p>
+    </div>
+
+    <div class="vhn-header-controls">
+      <!-- Year Selector -->
+      <div class="vhn-year-pills">
+        @for (yr of availableYears; track yr) {
+          <button
+            type="button"
+            class="vhn-year-btn"
+            [class.active]="selectedYear() === yr"
+            (click)="onYearChange(yr)"
+          >
+            {{ yr }}
+          </button>
+        }
+      </div>
+
+      <!-- Export Button -->
+      <button
+        mat-flat-button
+        color="primary"
+        class="vhn-export-btn"
+        [disabled]="isExporting() || isLoading()"
+        (click)="exportExcel()"
+      >
+        @if (isExporting()) {
+          <mat-spinner diameter="18" style="display: inline-block; margin-right: 8px;"></mat-spinner>
+          Đang xuất...
+        } @else {
+          <mat-icon>download</mat-icon>
+          Xuất Excel (.xlsx)
+        }
+      </button>
+    </div>
+  </header>
+
+  @if (isLoading()) {
+    <div class="vhn-loading-wrap">
+      <mat-spinner diameter="44"></mat-spinner>
+      <p>Đang tải dữ liệu báo cáo...</p>
+    </div>
+  } @else {
+    <!-- KPI Cards Grid -->
+    <section class="vhn-kpi-grid">
+      <div class="vhn-kpi-card emerald">
+        <div class="vhn-kpi-icon">
+          <mat-icon>check_circle</mat-icon>
+        </div>
+        <div class="vhn-kpi-info">
+          <span class="vhn-kpi-label">Việc Đã Hoàn Thành</span>
+          <span class="vhn-kpi-val">{{ kpis().totalDone | number }}</span>
+        </div>
+      </div>
+
+      <div class="vhn-kpi-card cyan">
+        <div class="vhn-kpi-icon">
+          <mat-icon>event_available</mat-icon>
+        </div>
+        <div class="vhn-kpi-info">
+          <span class="vhn-kpi-label">Ngày Hoạt Động</span>
+          <span class="vhn-kpi-val">{{ kpis().activeDays }} <small>ngày</small></span>
+        </div>
+      </div>
+
+      <div class="vhn-kpi-card amber">
+        <div class="vhn-kpi-icon">
+          <mat-icon>local_fire_department</mat-icon>
+        </div>
+        <div class="vhn-kpi-info">
+          <span class="vhn-kpi-label">Chuỗi Ngày Dài Nhất</span>
+          <span class="vhn-kpi-val">{{ kpis().longestStreak }} <small>ngày liên tục</small></span>
+        </div>
+      </div>
+
+      <div class="vhn-kpi-card indigo">
+        <div class="vhn-kpi-icon">
+          <mat-icon>schedule</mat-icon>
+        </div>
+        <div class="vhn-kpi-info">
+          <span class="vhn-kpi-label">Tổng Thời Gian</span>
+          <span class="vhn-kpi-val">{{ formatHours(kpis().totalTrackedMs) }} <small>giờ</small></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Heatmap Card -->
+    <section class="vhn-section-card">
+      <div class="vhn-card-header">
+        <h2>🔥 Bản Đồ Hoạt Động Năm {{ selectedYear() }} (365 Ngày)</h2>
+        <span class="vhn-card-sub">Mỗi ô đại diện cho một ngày. Màu càng đậm thể hiện năng suất càng cao.</span>
+      </div>
+      <div class="vhn-card-body">
+        <vhn-heatmap [days]="days()"></vhn-heatmap>
+      </div>
+    </section>
+
+    <!-- Task List Preview -->
+    <section class="vhn-section-card">
+      <div class="vhn-card-header">
+        <h2>📋 Nhật Ký Công Việc Đã Hoàn Thành ({{ tasks().length }} việc)</h2>
+      </div>
+      <div class="vhn-card-body">
+        @if (tasks().length === 0) {
+          <div class="vhn-empty-tasks">
+            <mat-icon>inbox</mat-icon>
+            <p>Chưa có công việc nào được ghi nhận hoàn thành trong năm {{ selectedYear() }}.</p>
+          </div>
+        } @else {
+          <div class="vhn-task-table-wrap">
+            <table class="vhn-task-table">
+              <thead>
+                <tr>
+                  <th style="width: 140px;">Ngày</th>
+                  <th>Tên Công Việc</th>
+                  <th style="width: 140px; text-align: right;">Thời Gian</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (t of tasks().slice(0, 50); track $index) {
+                  <tr>
+                    <td class="vhn-task-date">{{ t.doneOn }}</td>
+                    <td class="vhn-task-title">{{ t.title }}</td>
+                    <td class="vhn-task-time">{{ (t.timeSpent / 60000).toFixed(0) }} phút</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+            @if (tasks().length > 50) {
+              <p class="vhn-table-note">
+                (Hiển thị 50 việc gần nhất. Bạn có thể bấm "Xuất Excel" để xem toàn bộ danh sách.)
+              </p>
+            }
+          </div>
+        }
+      </div>
+    </section>
+  }
+</div>
