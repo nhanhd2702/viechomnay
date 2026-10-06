@@ -1,224 +1,121 @@
-<a href="https://super-productivity.com/"><img alt="Banner" src="docs/screens/banner.png"/></a>
+# ☀️ Việc Hôm Nay (VHN) — Quản Lý Công Việc Hằng Ngày Đơn Giản & Hiệu Quả
 
-<p align="center">
-  <strong>
-    An advanced todo list app with timeboxing & time tracking capabilities that supports importing tasks from your calendar, Jira, GitHub and others
-  </strong>
-</p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](./LICENSE)
+[![Platform: Web | Windows | Store](https://img.shields.io/badge/Platform-Web%20%7C%20Windows%20%7C%20Store-10B981.svg)]()
+[![Locale: vi--VN](https://img.shields.io/badge/Language-Ti%E1%BA%BFng%20Vi%E1%BB%87t%20(vi--VN)-blue.svg)]()
 
-<p align="center">
-  :globe_with_meridians: <a href="https://app.super-productivity.com">Open Web App</a> or :computer: <a href="https://github.com/super-productivity/super-productivity/wiki/2.01-Downloads-and-Install">Download</a>
-</p>
+> **Việc Hôm Nay** là ứng dụng quản lý công việc và thời gian cá nhân hằng ngày được tối ưu riêng cho người đi làm và dân văn phòng Việt Nam. Ứng dụng hoạt động theo triết lý **Local-first (Dữ liệu thuộc về bạn)**, không cần tạo tài khoản, không quảng cáo, mở lên là dùng ngay.
 
-<br/>
+---
 
-<!-- The <a> and <img> elements are intentionally made without space.
-     Because of the extra whitespace characters in <a>, makes blue underline lines appear for them.
-     Please do not change this formatting, so as not to make them.
--->
-<p align="center">
-  <a href="https://lbesson.mit-license.org"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"/></a>
-  &nbsp;
-  <a href="https://github.com/super-productivity/super-productivity/discussions"><img alt="GitHub Discussions" src="https://img.shields.io/badge/Community-Discussions-blue?style=flat-square&logo=github"/></a>
-</p>
+## 🎯 Điểm Khác Biệt & Cải Tiến So Với Bản Gốc (Super Productivity)
 
-<p align="center">
-  <a href="https://www.reddit.com/r/superProductivity/"><img alt="Reddit Community" src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white" width="85"/></a>
-  &nbsp;
-  <a href="https://mastodon.social/@superproductivity"><img alt="Super Productivity on Mastodon" src="https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white" width="105"/></a>
-  &nbsp;
-  <a href="https://x.com/intent/post?text=Super%20Productivity%20%20https%3A%2F%2Fsuper-productivity.com"><img alt="Tweet" src="https://img.shields.io/badge/TWEET-%23000000.svg?style=for-the-badge&logo=X" width="90"/></a>
-</p>
+Ứng dụng được tái cấu trúc chuyên sâu (Deep Fork) từ mã nguồn mở Super Productivity v19.1.0 với các điểm nâng cấp vượt trội:
 
-<p align="center">
-  <a href="https://youtu.be/_mvMXWLsL-8"><img src="docs/screens/reel.gif" alt="Super Productivity: capture a task, plan it on the schedule, then focus on it"/></a>
-</p>
+| Tính năng | Bản gốc Super Productivity | Việc Hôm Nay (VHN) |
+|---|---|---|
+| **Ngôn ngữ & Múi giờ** | Tiếng Anh mặc định, cấu hình phức tạp | **100% Tiếng Việt**, chuẩn múi giờ `Asia/Ho_Chi_Minh`, Thứ Hai đầu tuần |
+| **Màu sắc & Nhận diện** | Xanh tím truyền thống | **Xanh Ngọc Lục Bảo (Emerald `#10B981`)** tươi mới, logo mặt trời hoàn thành việc |
+| **Thanh điều hướng** | Quá nhiều mục gây rối mắt (Donate, Plugins, Issue...) | **7 mục cố định tinh giản**: Hôm nay, Kanban, Lịch tuần, Thói quen, Báo cáo, Dự án, Cài đặt |
+| **Kanban Board** | Mặc định là ma trận Eisenhower 2x2 | **Bảng Kanban 3 cột trực quan**: Cần làm ➔ Đang làm ➔ Xong |
+| **Khởi đầu ngày mới** | Không có luồng chào sáng tập trung | **Modal Chào Sáng (Morning Ritual)**: Nhập việc nhanh nhiều dòng, tự động gắn thẻ Hôm nay |
+| **Kết thúc ngày** | Nhiều bảng đánh giá và counter phức tạp | **Đóng ngày 1-chạm**: Động viên ngẫu nhiên, nút dời toàn bộ việc tồn sang ngày mai |
+| **Thống kê & Báo cáo** | Chỉ xem biểu đồ giờ cơ bản | **Bản đồ Heatmap 365 ô SVG** + Thẻ chỉ số Streak + **Xuất Excel (.xlsx)** |
+| **Dung lượng & Tài nguyên**| Ôm đồm Jira, GitLab, Redmine, Nextcloud... | **Đã gỡ bỏ sạch sẽ các module thừa**, chạy cực nhẹ và mượt mà |
 
-## :computer: Downloads & Install
+---
 
-<p align="center">
-  <a href='https://flathub.org/apps/com.super_productivity.SuperProductivity' target="_blank"><img alt='Get it on Flathub' src='https://flathub.org/api/badge?locale=en' height="30"/></a>
-  <a href="https://snapcraft.io/superproductivity" target="_blank"><img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" height="30"/></a>
-  <a href='//www.microsoft.com/store/apps/9NHFVG8361TW?cid=storebadge&ocid=badge' target="_blank"><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='Get it from Microsoft Store' height="30"/></a>
-  <a href='https://play.google.com/store/apps/details?id=com.superproductivity.superproductivity&amp;referrer=utm_source%3Dgithub%26utm_medium%3Downed%26utm_campaign%3Dreadme' target="_blank"><img src='docs/screens/google-play-badge.svg' alt='Play Store Badge' height="30"/></a>
-  <a href='//f-droid.org/en/packages/com.superproductivity.superproductivity' target="_blank"><img src='https://f-droid.org/assets/fdroid-logo-text_S0MUfk_FsnAYL7n2MQye-34IoSNm6QM6xYjDnMqkufo=.svg' alt='F-Droid Badge' height="30"/></a>
-  <a href='http://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/super-productivity/super-productivity/releases'><img src='https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/badge_obtainium.png' alt='Get it on Obtainium' height="30"/></a>
-  <a href='//apps.apple.com/app/super-productivity/id1482572463?l=en' target="_blank"><img src='docs/screens/app-store-badge.svg' alt='App Store Badge' height="30"/></a>
-</p>
+## 🚀 Hướng Dẫn Cài Đặt Nhanh Bằng 1-Click Script
 
-<p align="center">
-  <strong>For all current downloads, package links, and platform-specific notes:
-    <a href="https://github.com/super-productivity/super-productivity/wiki/2.01-Downloads-and-Install" target="_blank">
-      check the wiki
-    </a>
-  </strong><br/>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.01-Downloads-and-Install" target="_blank">
-    <img
-      src="docs/screens/get-it-on-github.webp"
-      alt="Get it on GitHub"
-      height="120"
-    />
-  </a>
-</p>
+### Yêu cầu hệ thống
+* Hệ điều hành: Windows 10/11 (hoặc macOS / Linux)
+* Đã cài đặt [Node.js](https://nodejs.org/) (phiên bản khuyến nghị: **v20** hoặc **v22**)
 
-<hr>
+### Cách chạy:
+1. Nhấp đúp chuột vào file **`setup.bat`** (hoặc mở PowerShell gõ `.\setup.ps1`).
+2. Script sẽ tự động kiểm tra Node.js và cài đặt các thư viện phụ thuộc (`node_modules`) nếu chưa có.
+3. Menu tương tác hiển thị cho phép bạn chọn ngay:
+   * **[1]** Khởi chạy **Web App** (mở trình duyệt tại `http://localhost:4200`)
+   * **[2]** Khởi chạy **Desktop App** (Electron Windows)
+   * **[3]** Đóng gói bộ cài đặt Windows (**`.exe` Installer** trong `.tmp/app-builds`)
+   * **[4]** Đóng gói **Web Production (PWA)**
 
-<p align="center">
-  <a href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi" target="_blank">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg"
-      alt="Ukraine Flag"
-      height="120"
-    /><br/>
-    <strong>Humanitarian Aid for Ukraine</strong><br/>
-    Support humanitarian relief via the official National Bank of Ukraine account.
-  </a>
-</p>
+---
 
-<hr>
+## 🛠️ Các Lệnh Thao Tác Thủ Công (Terminal)
 
-## :heavy_check_mark: Features
+Nếu bạn muốn chạy qua dòng lệnh PowerShell / Terminal:
 
-- **Keep organized and focused!** Plan and categorize your tasks using sub-tasks, projects and tags and color code them as needed.
-- **Plan ahead** with the **planner** and see your day laid out on the **schedule** timeline, next to your calendar events.
-- Sort tasks visually on **boards**, like the built-in **Kanban** and **Eisenhower Matrix**, or build your own.
-- Use **timeboxing** and **track your time**. Create time sheets and work summaries in a breeze to easily export them to your company's time tracking system.
-- Helps you to **establish healthy & productive habits**:
-  - A **break reminder** reminds you when it's time to step away.
-  - The **anti-procrastination feature** helps you gain perspective when you really need to.
-  - Need some extra focus? **Focus mode** offers **Pomodoro**, **Flowtime** and **countdown** sessions.
-  - **Collect personal metrics** to see, which of your work routines need adjustments.
-- Integrate with **Jira**, **Trello**, **GitHub**, **GitLab**, **Gitea**, **OpenProject**, **Linear**, **ClickUp**, **Redmine**, **Nextcloud Deck** and **Azure DevOps**. Auto import tasks assigned to you, plan the details locally, automatically create work logs, and get notified immediately, when something changes.
-- Basic **CalDAV** integration.
-- Back up and synchronize your data across multiple devices with **SuperSync**, **Dropbox** and **WebDAV** support. SuperSync is our own end-to-end encrypted sync service, which you can also [host yourself](https://github.com/super-productivity/super-productivity/tree/master/packages/super-sync-server).
-- Attach context information to tasks and projects. Create **notes**, attach **files** or create **project-level bookmarks** for links, files, and even commands.
-- Super Productivity **respects your privacy** and **does NOT collect any data**. No account or registration is required. **You decide where you store your data!**
-- Extend and restyle the app with **[plugins](https://github.com/super-productivity/super-productivity/wiki/2.15-Develop-a-Plugin)** and **[custom themes](https://github.com/super-productivity/super-productivity/wiki/3.09-Theming)**.
-- Runs on **Linux**, **macOS**, **Windows**, **Android**, **iOS** and in the **browser**.
-- It's **free** and **open source** and always will be.
+```bash
+# 1. Cài đặt thư viện
+npm install
 
-And much more!
+# 2. Chạy Web App phát triển
+npm run serve
+# Trình duyệt sẽ mở tại http://localhost:4200
 
-> [!NOTE]
-> The web version has some limitations: See the **[Web App vs Desktop comparison](https://github.com/super-productivity/super-productivity/wiki/3.05-Web-App-vs-Desktop)** for more details.
+# 3. Chạy Desktop Electron
+npm run start
 
-## :book: Documentation and Guides
+# 4. Đóng gói bộ cài đặt Windows (.exe NSIS)
+npm run dist:win
+# File cài đặt .exe sẽ xuất hiện tại thư mục .tmp/app-builds/
 
-<!-- Getting Started -->
-<h3>Getting Started</h3>
-<ul>
-  <li><a href="https://dev.to/johannesjo/getting-started-with-super-productivity-2791">Getting started guide</a> (article)</li>
-  <li><a href="https://www.youtube.com/watch?v=VoF2_RSdNXA">Video walkthrough</a> (YouTube)</li>
-  <li><a href="https://dev.to/johannesjo/the-prioritising-scheme-how-to-eat-the-frog-with-super-productivity-mlk">Eat the frog prioritizing scheme</a></li>
-</ul>
-<p><strong>Starting Point in Wiki:</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/1.01-First-Steps">First steps</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.00-Reference">Reference</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.00-How_To">How-To</a>
-</p>
-<p><strong>Productivity Tips:</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.03-Keyboard-Shortcuts">Keyboard Shortcuts</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.04-Short-Syntax">Short Syntax</a>
-</p>
-<p><strong>Need Help?</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/discussions">Visit the discussions page</a>
-</p>
-<p>See the bottom of the README for more information on the documentation.</p>
+# 5. Đóng gói Web Production
+npm run buildFrontend:prodWeb
+# File xuất tại .tmp/angular-dist/browser/
+```
 
-<!-- Advanced Topics -->
-<h3>Advanced Topics</h3>
-<p>Here are some other topics covered in the
-  <a href="https://github.com/super-productivity/super-productivity/wiki">official wiki</a>:
-</p>
-<p><strong>Development:</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.11-Run-the-Development-Server">Run dev server</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.12-Package-the-App">Package the app</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.14-Build-for-Android">Build for Android</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.13-Run-with-Docker">Run with Docker</a>
-</p>
-<p><strong>Data Management:</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/4.23-Managing-Your-Data">User Data</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.07-Issue-Integration-Comparison">Issue Providers</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.08-Sync-Integration-Comparison">Sync Providers</a>
-</p>
-<p><strong>Customization:</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/2.15-Develop-a-Plugin">Plugins</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.09-Theming">Themes</a>
-</p>
-<p><strong>APIs:</strong><br>
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.01-API#1-sync-server-rest-api">Sync Server</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.01-API#2-plugin-api">Plugins</a> •
-  <a href="https://github.com/super-productivity/super-productivity/wiki/3.01-API#3-local-rest-api">REST</a>
-</p>
+---
 
-## Community
+## 📦 Kiến Trúc & Công Nghệ
 
-The development of Super Productivity is driven by a wonderful community of users and contributors. Thank you all so much for your support!
+```
+super-productivity/
+├── electron/                         # Tiến trình Desktop Electron Main Process
+├── src/
+│   ├── app/
+│   │   ├── core/                     # Theme ngọc lục bảo, Locale vi-VN, SQLite/IndexedDB
+│   │   ├── core-ui/
+│   │   │   └── magic-side-nav/       # Sidebar 7 mục cố định
+│   │   ├── pages/
+│   │   │   └── daily-summary/        # Đóng ngày 1-chạm & dời task tồn sang mai
+│   │   └── features/
+│   │       ├── boards/               # Kanban board 3 cột mặc định
+│   │       ├── pomodoro/             # Đồng hồ đếm Pomodoro
+│   │       ├── focus-mode/           # Chế độ làm việc tập trung sâu
+│   │       ├── habits/               # Theo dõi thói quen hằng ngày
+│   │       ├── vhn-morning-ritual/   # [MỚI] Chào sáng & lên kế hoạch nhanh
+│   │       └── vhn-year-review/      # [MỚI] Heatmap 365 ô SVG & Xuất Excel
+│   └── assets/
+│       ├── i18n/vi.json              # Bản dịch tiếng Việt chuẩn hóa
+│       └── icons/vhn.svg             # Logo biểu tượng Việc Hôm Nay
+├── setup.bat                         # Script 1-click launcher Windows
+└── setup.ps1                         # Script 1-click launcher PowerShell
+```
 
-<p>
-  :eyes:
-  <a href='https://github.com/super-productivity/awesome-super-productivity'>
-    Check out our awesome curated list of community-created resources about Super Productivity
-  </a>
-</p>
+* **Frontend:** Angular 21 (Standalone Components, Signals, RxJS)
+* **Giao diện:** Angular Material & CDK Drag-and-drop
+* **Quản lý trạng thái:** NgRx Store & Entity
+* **Desktop Runtime:** Electron 43
+* **Xuất dữ liệu:** `exceljs` (Lazy-loaded theo nhu cầu)
 
-### :hearts: Contributing
+---
 
-You don't have to be a programmer to help: spread the word, [answer questions](https://github.com/super-productivity/super-productivity/discussions), [report bugs](https://github.com/super-productivity/super-productivity/issues/new), [contribute translations](https://github.com/super-productivity/super-productivity/wiki/2.18-Contribute-Translations), build [plugins](https://github.com/super-productivity/super-productivity/wiki/2.15-Develop-a-Plugin) or [themes](https://github.com/super-productivity/super-productivity/wiki/3.09-Theming), or [sponsor the project](https://github.com/sponsors/johannesjo).
+## 🗺️ Lộ Trình Triển Khai (Release Roadmap)
 
-Before opening a pull request, read [CONTRIBUTING.md](CONTRIBUTING.md) and follow the [commit message format](.github/CONTRIBUTING.md#commit-message-format).
+- [x] **Giai đoạn 1: Web App & Docker** (Đã hoàn thành)
+  - Hoàn thiện rebrand, bản địa hóa tiếng Việt, bổ sung module Chào Sáng & Báo Cáo Năm.
+- [ ] **Giai đoạn 2: Windows Desktop Installer**
+  - Đóng gói file `.exe` (NSIS) và Portable cho người dùng tải trực tiếp cài đặt trên máy tính.
+- [ ] **Giai đoạn 3: Phát hành Microsoft Store & Mobile**
+  - Đăng ký tài khoản Microsoft Partner Center, đóng gói định dạng MSIX/AppX đưa lên Windows Store.
+  - Tích hợp Capacitor đưa lên Google Play Store và Apple App Store.
 
-[//]: # '[![inlang status badge](https://badge.inlang.com/?url=github.com/super-productivity/super-productivity)](https://fink.inlang.com/github.com/super-productivity/super-productivity?ref=badge)'
-[//]: #
-[//]: # 'You can use the Fink Localization Editor to edit, lint, and add translations for different languages. [Contribute via fink Guide](https://inlang.com/g/6ddyhpoi).'
+---
 
-### Special Thanks to our Sponsors
+## 📄 Bản Quyền & Giấy Phép (License & Attribution)
 
-A big thank you to all our sponsors!
+Dự án phát triển dựa trên mã nguồn mở [Super Productivity](https://github.com/super-productivity/super-productivity) của tác giả **Johannes Millan**, phát hành theo giấy phép **MIT License**.
 
-- **[SignPath.io](https://signpath.io?utm_source=foundation&utm_medium=github&utm_campaign=super-productivity)**: free code signing for our Windows binaries, with a certificate by [SignPath Foundation](https://signpath.org?utm_source=foundation&utm_medium=github&utm_campaign=super-productivity).
-
-_(If you are, intend to or have been a sponsor and want to be shown here, [please let me know](mailto:contact@super-productivity.com)!)_
-
-## Documentation: Manual versus Automated
-
-There are two wikis: the official one hosted by GitHub and the autonomously generated variant using [DeepWiki.com](https://deepwiki.com/super-productivity/super-productivity). The manually curated version is a more stable and approachable resource designed to help you understand the app from a more human-focused perspective whereas DeepWiki is optimized for explaining the code itself with little regard for context beyond that.
-
-<!-- Official Wiki -->
-<h3>Official Wiki</h3>
-<p>
-  It is preferable to maintain local documentation rather than rely on an external service.
-  It is also preferable that the documentation is updated in tandem with the code changes as
-  demonstrated in
-  <a href="https://github.com/super-productivity/super-productivity/commit/7a51d4b06e414fdcc48e4999197a93eee9cd09da">this commit</a>.
-</p>
-<p>
-  Changes to files within <code>./docs/wiki</code> are linted in CI before being automatically
-  sync'd to the repository's official Wiki hosted by GitHub.
-</p>
-<p>
-  Migrating to Docusaurus is a long-term goal once the content and structure of the wiki has matured
-  and the remaining "legacy docs" have either been reworked or removed. There are some automations in development to help reduce the difference between the published docs and the state of the code while retaining a human-in-the-loop.
-</p>
-
-<!-- DeepWiki -->
-<h3>DeepWiki.com</h3>
-<p>
-  If you have very specific questions about how the code works or why a bug might be producing
-  a particular message it might be useful to
-  <a href="https://deepwiki.com/super-productivity/super-productivity">
-    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki">
-  </a>. It can help "cite your sources" when discussing functionality and code that you don't fully
-  understand as part of feature requests or bug reports.
-</p>
-<p>
-  This automated
-  <a href="https://diataxis.fr/reference/#reference">reference</a>
-  does come with some significant drawbacks:
-</p>
-<ol>
-  <li><strong>Intent:</strong> Describes what code does, not why decisions or tradeoffs were made.</li>
-  <li><strong>Staleness:</strong> Will *always* lag behind the code.</li>
-  <li><strong>Code-Focused:</strong> Does not provide guides or conceptual explanations.</li>
-  <li><strong>Cost:</strong> Potential future cost and higher resource usage than static docs.</li>
-</ol>
+Mọi bản quyền gốc của tác giả được bảo lưu và công nhận nguyên vẹn theo giấy phép MIT. Xem chi tiết tại tệp [LICENSE](./LICENSE).
