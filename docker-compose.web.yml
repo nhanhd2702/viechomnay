@@ -1,0 +1,11 @@
+services:
+  viechomnay-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: viechomnay-web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    environment:
+      - TZ=Asia/Ho_Chi_Minh

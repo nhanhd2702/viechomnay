@@ -42,6 +42,20 @@
 
 ---
 
+## 🐧 Triển Khai Web App Trên Ubuntu Server 24.04 LTS (VPS / Cloud)
+
+Đã có sẵn script tự động hóa toàn bộ việc cài đặt Web App lên máy chủ Ubuntu 24.04 (Noble Numbat) / 22.04 với Nginx, Node.js 22, tự tạo Swap chống tràn RAM, Gzip và cấu hình SSL Certbot:
+
+```bash
+# Chạy 1 lệnh trên terminal VPS:
+curl -fsSL https://raw.githubusercontent.com/nhanhd2702/viechomnay/main/install-ubuntu-server.sh | sudo bash
+```
+
+📄 Xem hướng dẫn chi tiết từng bước tại: **[HUONG_DAN_UBUNTU_SERVER_2404.md](./HUONG_DAN_UBUNTU_SERVER_2404.md)**
+*(Bao gồm hướng dẫn trỏ tên miền, kích hoạt HTTPS miễn phí Let's Encrypt và triển khai bằng Docker)*.
+
+---
+
 ## 🛠️ Các Lệnh Thao Tác Thủ Công (Terminal)
 
 Nếu bạn muốn chạy qua dòng lệnh PowerShell / Terminal:
